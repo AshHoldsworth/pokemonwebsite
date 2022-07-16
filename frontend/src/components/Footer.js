@@ -6,7 +6,7 @@ export const Footer = () => {
             <div className="footer">
                 <div>Contact Us</div>
                 <div>Facebook</div>
-                <div>Twitter</div>
+                <div>Gyms</div>
                 <div><a href="https://pokeapi.co/">PokéAPI</a></div>
             </div>
         </>
