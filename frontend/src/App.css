@@ -1,0 +1,274 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  color: #ffffff;
+}
+
+.header #nav-bar {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  font-size: calc(2px + 2vmin);
+  margin: 1%;
+  justify-content: space-around;
+  color: #ffffff;
+}
+
+.header #nav-bar .link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header #nav-bar .active {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(1px + 1vmin);
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a:link, a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dddddd;
+  color: #282c34;
+  height: 80vh;
+  flex: 1;
+  font-size: calc(1px + 1vmin);
+  padding: 1vh 0 0 0;
+}
+
+.filter #title {
+  display: flex;
+  margin-top: 1vh;
+  font-size: calc(6px + 1vmin);
+}
+
+.filter .types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1vh 1vh 0 1vh;
+}
+
+.filter .types #type {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0 0 1vh 0;
+}
+
+.filter .regions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1vh 1vh 0 1vh;
+}
+
+.filter .regions #region {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0 0 1vh 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #282c34;
+  height: 80vh;
+  flex: 5;
+}
+
+.pokemon-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  width: 10%;
+  height: fit-content;
+  padding: 1vh 0 1vh 3vh;
+}
+
+.pokemon #number {
+  font-size: calc(6px + 1vmin);
+}
+
+.pokemon #name {
+  font-size: calc(6px + 2vmin);
+}
+
+.pokemon img {
+  width: 50%;
+}
+
+.pokemon #type {
+  font-size: calc(1px + 1vmin);
+  flex-wrap: wrap;
+}
+
+.pokemon button {
+  background-color: #282c34;
+  width: 7vw;
+  height: 2vh;
+  color: #ffffff;
+  border: 0;
+  border-radius: 1vw;
+  font-size: 40%;
+}
+
+.pokemon button:hover {
+  background-color: #555e70;
+}
+
+.pokemon button:focus {
+  background-color: #858585;
+  color: #282c34
+}
+
+.modal-background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 1vw;
+  width: 80%;
+  height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  flex-direction: column;
+  padding: 2vh 1vw 2vh 1vw;
+  justify-content: space-between;
+}
+
+.modal #header {
+  display: flex;
+}
+
+.modal #body {
+  display: flex;
+  padding: 2vh 0 0 0;
+}
+
+.modal #image {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal img {
+  width: 90%;
+}
+
+.modal #sprites {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.modal #sprites img {
+  width: 25%;
+}
+
+.modal #description {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 0 0 0 1vw;
+  flex-wrap: wrap;
+  font-size: 50%;
+}
+
+.modal #stats {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  flex: 1;
+  flex-wrap: wrap;
+  font-size: 50%;
+}
+
+.modal #footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal button {
+  background-color: #282c34;
+  width: 7vw;
+  height: 2vh;
+  color: #ffffff;
+  border: 0;
+  border-radius: 1vw;
+  font-size: 40%;
+}
+
+.modal button:hover {
+  background-color: #555e70;
+}
+
+.modal button:focus {
+  background-color: #858585;
+  color: #282c34
+}
