@@ -47,7 +47,7 @@ export const PokemonModal = ({ pokeId, modalIsOpen }) => {
                         </div>
                         <div id="footer">
                             <NavLink to={"/pokemon"}>
-                                <button onClick={() => modalIsOpen(false)}>CLOSE</button>
+                                <button onClick={() => modalIsOpen(false)}>Close</button>
                             </NavLink>
                         </div>
                     </> : null}
