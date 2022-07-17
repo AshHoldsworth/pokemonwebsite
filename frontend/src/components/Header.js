@@ -7,7 +7,7 @@ export const Header = () => {
         <>
             <div className="header">
                 <div id="title">
-                    Pokémon Website
+                    <img src={require(`../images/global/logo.png`)} />
                 </div>
                 <div id="nav-bar">
                     <div><NavLink className="link" to="/" activeclassname="active">Home</NavLink></div>
