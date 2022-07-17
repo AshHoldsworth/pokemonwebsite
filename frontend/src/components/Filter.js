@@ -22,18 +22,6 @@ const types = [
     "fairy"
 ]
 
-const regions = [
-    "all",
-    "kanto",
-    "johto",
-    "hoenn",
-    "sinnoh",
-    "unova",
-    "kalos",
-    "alola",
-    "galar"
-]
-
 export const Filter = ({type, setType, region, setRegion}) => {
 
     return (
@@ -52,23 +40,6 @@ export const Filter = ({type, setType, region, setRegion}) => {
                             key={i}
                             checked={type === t}
                             onChange={(e) => {setType(e.target.value)}}
-                            />
-                        </div>
-                    )}
-                </div>
-                <div id="title">Region:</div>
-                <div className="regions">
-                    {regions.map((r, i) =>
-                        <div
-                            id="region"
-                            key={i}>{capitalFirstLetter(r)}
-                            <input
-                                type="radio"
-                                value={r}
-                                name="region"
-                                key={i}
-                                checked={region === r}
-                                onChange={(e) => {setRegion(e.target.value)}}
                             />
                         </div>
                     )}

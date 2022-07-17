@@ -2,6 +2,7 @@ import { capitalFirstLetter } from "../functions/capitalFirstLetter"
 import { useState } from "react"
 import { usePokemonDetails } from "../hooks/usePokemonDetails"
 import { ModalSprites } from "./ModalSprites"
+import { NavLink } from "react-router-dom"
 
 export const PokemonModal = ({ pokeId, modalIsOpen }) => {
     const [detail, setDetail] = useState([])
@@ -20,7 +21,7 @@ export const PokemonModal = ({ pokeId, modalIsOpen }) => {
                                 .padStart(3, 0)
                                 + ": " +
                                 capitalFirstLetter(detail.species.name)}
-                                <hr/>
+                            <hr />
                         </div>
                         <div id="body">
                             <div id="image">
@@ -45,7 +46,9 @@ export const PokemonModal = ({ pokeId, modalIsOpen }) => {
                             </div>
                         </div>
                         <div id="footer">
-                            <button onClick={() => modalIsOpen(false)}>CLOSE</button>
+                            <NavLink to={"/pokemon"}>
+                                <button onClick={() => modalIsOpen(false)}>CLOSE</button>
+                            </NavLink>
                         </div>
                     </> : null}
                 </div>

@@ -10,11 +10,10 @@ export const PokemonList = () => {
     usePokemonList({ setPokemon })
     pokemon.sort((a, b) => (a.id > b.id) ? 1 : -1)
     const [type, setType] = useState("all")
-    const [region, setRegion] = useState("all")
 
     return (
         <>
-            <Filter type={type} setType={setType} region={region} setRegion={setRegion} />
+            <Filter type={type} setType={setType}/>
             <div className="body">
                 <div className="pokemon-container">
                     {pokemon.map(p => (
