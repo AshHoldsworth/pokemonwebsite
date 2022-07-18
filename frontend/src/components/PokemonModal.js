@@ -2,9 +2,8 @@ import { capitalFirstLetter } from "../functions/capitalFirstLetter"
 import { useState } from "react"
 import { usePokemonDetails } from "../hooks/usePokemonDetails"
 import { ModalSprites } from "./ModalSprites"
-import { NavLink } from "react-router-dom"
 
-export const PokemonModal = ({ pokeId, modalIsOpen }) => {
+export const PokemonModal = ({ pokeId, modalIsOpen, fromGallery }) => {
     const [detail, setDetail] = useState([])
     const [isBusy, setIsBusy] = useState(true)
     const imgId = pokeId.toString().padStart(3, 0)
@@ -15,7 +14,7 @@ export const PokemonModal = ({ pokeId, modalIsOpen }) => {
             <div className="modal-background">
                 <div className="modal">
                     {!isBusy ? <>
-                        <div id="header">
+                        <div id="header" key={pokeId}>
                             {detail.id
                                 .toString()
                                 .padStart(3, 0)
@@ -46,9 +45,7 @@ export const PokemonModal = ({ pokeId, modalIsOpen }) => {
                             </div>
                         </div>
                         <div id="footer">
-                            <NavLink to={"/pokemon"}>
                                 <button onClick={() => modalIsOpen(false)}>Close</button>
-                            </NavLink>
                         </div>
                     </> : null}
                 </div>

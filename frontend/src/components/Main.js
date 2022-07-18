@@ -1,4 +1,3 @@
-import { Filter } from './Filter'
 import { Landing } from './Landing'
 import { About } from './About'
 import { PokemonList } from './PokemonList'
@@ -13,7 +12,7 @@ export const Main = () => {
             <div className="main">
                 <Routes>
                     <Route path="/" element={<Landing />} />
-                    <Route path="/pokemon/*" element={<PokemonList />} />
+                    <Route path="/pokemon/:searchQuery" element={<PokemonList />} />
                     <Route path="/gallery/*" element={<Gallery />} />
                     <Route path="/about" element={<About />} />
                 </Routes>

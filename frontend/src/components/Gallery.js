@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { PokemonModal } from './PokemonModal'
 
 export const Gallery = () => {
     const [imgId, setImgId] = useState(Math.floor(Math.random() * 808))
+    const [openModal, setOpenModal] = useState(false)
 
     let currentId = imgId.toString().padStart(3, 0)
     let nextId = (imgId + 1).toString().padStart(3, 0)
@@ -30,7 +32,7 @@ export const Gallery = () => {
                         )}.png`)} />
                 </div>
                 <div className="image-large">
-                    <img src={require(`../images/pokemon/${currentId}.png`)} />
+                    <img src={require(`../images/pokemon/${currentId}.png`)} onClick={() => {setOpenModal(true)}} />
                 </div>
                 <div className="image-small">
                     <img src={require(`../images/pokemon/${(
@@ -41,6 +43,7 @@ export const Gallery = () => {
                     <button onClick={() => { updateImgId(+1) }}>Next</button>
                 </div>
             </div>
+            {openModal && <PokemonModal pokeId={imgId} modalIsOpen={setOpenModal} />}
         </>
     )
 }

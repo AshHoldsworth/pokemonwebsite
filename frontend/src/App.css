@@ -1,5 +1,10 @@
+body {
+  overflow-y: hidden;
+}
+
 .App {
   text-align: center;
+  overflow-y: hidden;
 }
 
 .header {
@@ -73,10 +78,11 @@
   align-items: center;
   background-color: #dddddd;
   color: #282c34;
-  height: 80vh;
+  height: inherit;
   flex: 1;
   font-size: calc(1px + 1vmin);
   padding: 1vh 0 0 0;
+  justify-content: space-between;
 }
 
 .filter #title {
@@ -98,6 +104,16 @@
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 0 0 1vh 0;
+}
+
+.filter .search-box {
+  margin: 0 0 1vh 0;
+  position: fixed;
+  bottom: 7vh;
+}
+
+.filter .search-box input {
+  width: 70%;
 }
 
 .body {
@@ -134,7 +150,7 @@
 }
 
 .pokemon #name {
-  font-size: calc(6px + 2vmin);
+  font-size: 90%;
 }
 
 .pokemon img {

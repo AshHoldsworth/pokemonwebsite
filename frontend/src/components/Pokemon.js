@@ -16,21 +16,15 @@ export const Pokemon = ({ pokemon }) => {
                 <div id="number">{pokemon.id}</div>
                 <div id="name">{pokemon.name.english}</div>
                 <div id="image">
-                    <NavLink to={"./" + pokeId + "/image"}>
-                        <img src={require(`../images/pokemon/${imgId}.png`)} onClick={() => { setOpenImgModal(true) }} />
-                    </NavLink>
+                    <img src={require(`../images/pokemon/${imgId}.png`)} onClick={() => { setOpenImgModal(true) }} />
                 </div>
                 <div id="type">{pokemonTypes}</div>
                 <div id="button">
-                    <NavLink to={"./" + pokeId}>
-                        <button onClick={() => { setOpenModal(true) }}>More Info</button>
-                    </NavLink>
+                    <button onClick={() => { setOpenModal(true) }}>More Info</button>
                 </div>
             </div>
-            <Routes>
-                {openModal && <Route path={"/" + pokeId} element={<PokemonModal pokeId={pokeId} modalIsOpen={setOpenModal} />} />}
-                {openImgModal && <Route path={"/" + pokeId + "/image"} element={<ImageModal pokeId={pokeId} modalIsOpen={setOpenImgModal} />} />}
-            </Routes>
+                {openModal && <PokemonModal pokeId={pokeId} modalIsOpen={setOpenModal} />}
+                {openImgModal && <ImageModal pokeId={pokeId} modalIsOpen={setOpenImgModal} />}
         </>
     )
 

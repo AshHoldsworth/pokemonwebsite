@@ -9,9 +9,7 @@ export const ImageModal = ({ pokeId, modalIsOpen }) => {
                 <div className="image-modal">
                     <div id="image"><img src={require(`../images/pokemon/${imgId}.png`)} onClick={() => modalIsOpen(false)} /></div>
                     <div>
-                        <NavLink to={"/pokemon"}>
-                            <button onClick={() => modalIsOpen(false)}>Close</button>
-                        </NavLink>
+                        <button onClick={() => modalIsOpen(false)}>Close</button>
                     </div>
                 </div>
             </div>
